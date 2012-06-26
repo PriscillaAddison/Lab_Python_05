@@ -1,48 +1,22 @@
-def do(thing):
-    return str(thing) + str(1)
-print do(5)
-51
-   
-def do(one, two=5):
-    return one+two
-print do(5)
-10
-
-def do(a,b):
-    a=5
-    b=5
-    return a*b
-inp = 8
-do(inp,5)
-print inp
-
-def try_to_change_list_contents(the_list):
-    the_list.append('four')
-outer_list = ['one', 'two', 'three']
-try_to_change_list_contents(outer_list)
-print outer_list
-
-def do(a, f):
-    return a*f(a)
-def inp(a):
-    return a*2
-print do(6,inp)
-
+#2
+#A function that takes an integer and returns the factorial of
+#that number
 def factorial(a):
     n=1
     while a>0:
         n=n*a
-
     a=a-1
     return n
 
+#3
+# A function that takes an integer n and returns a list of
+# containing the first n fibonacci numbers
 
-def fibonacci(y):
-    fi_li=[]
-    for i in range(1,y+1):
-        fi_li.append(fibon(i))
-    return fi_li
-
+def fibonacci(n):
+    fib_list=[]
+    for i in range(1,n+1):
+        fib_list.append(fibon(i))
+    return fib_list
 
 print fibonacci(10)
 def fibon(x):
@@ -52,6 +26,57 @@ def fibon(x):
         return 1
     else:
         return fibon(x-1)+fibon(x-2)
+
+#4
+# A function that takes an integer and returns true if
+# the integer is prime and false otherwise    
+def prime(p):
+    count=0
+    if i in range(1,p+1):
+        count+=1
+    if count==2:
+        return True
+    else:
+        return False
+print prime(13)    
+
+#CHALLENGING PROBLEMS:
+
+#4
+# A function that tests if a string is a Palindrome
+# and returns true, otherwise returns false
+def isPalindrome(x):
+    if x==x[::-1]:
+        return True
+    else:
+        return False    
+    
+isPalindrome('able was I ere I saw elba')
+
+
+#5
+""" A function that takes two strings as input and
+returns true if the first string is a substring of the
+second string, else returns false """
+def isSubstring(a,b):
+    if b.find(a)>=0:
+        return True
+    elif b.find(a)==(-1):
+        return False
+
+print isSubstring('fs','barfoobar')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
